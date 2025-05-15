@@ -224,5 +224,3 @@ export function VaccineDetailDisplay({ vaccineInfo }: VaccineDetailDisplayProps)
     </Card>
   );
 }
-
-```

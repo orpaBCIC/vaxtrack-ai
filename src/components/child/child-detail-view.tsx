@@ -12,7 +12,7 @@ import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
-import { Baby, CalendarDays, FileText, Users, Mail, Trash2, ListChecks, Wand2, Loader2, Edit3, Save, UserCircle, Weight, Ruler, ShieldPlus, AlertTriangleIcon, ShieldAlert, FileArchive, CheckBadgeIcon, QrCode, Share2, FileDown } from 'lucide-react';
+import { Baby, CalendarDays, FileText, Users, Mail, Trash2, ListChecks, Wand2, Loader2, Edit3, Save, UserCircle, Weight, Ruler, ShieldPlus, AlertTriangleIcon, ShieldAlert, FileArchive, CheckIcon, QrCode, Share2, FileDown } from 'lucide-react';
 import { format, differenceInYears, parseISO } from 'date-fns';
 import { updateChildProfile as saveProfileUpdate } from '@/lib/localStorage';
 import { useToast } from '@/hooks/use-toast';
@@ -300,7 +300,7 @@ export function ChildDetailView({ initialProfile }: ChildDetailViewProps) {
                     </Select>
                 ) : (
                     <Badge variant={profile.vaccinationVerificationStatus === 'verified' ? 'default' : profile.vaccinationVerificationStatus === 'pending' ? 'secondary' : 'destructive'} className="capitalize">
-                        <CheckBadgeIcon className="mr-1 h-4 w-4"/>{profile.vaccinationVerificationStatus || 'Pending'}
+                        <CheckIcon className="mr-1 h-4 w-4"/>{profile.vaccinationVerificationStatus || 'Pending'}
                     </Badge>
                 )}
             </div>
@@ -407,5 +407,3 @@ export function ChildDetailView({ initialProfile }: ChildDetailViewProps) {
     </div>
   );
 }
-
-```
